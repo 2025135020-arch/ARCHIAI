@@ -88,6 +88,20 @@ function closeProjectModal(e) {
     }
 }
 
+// --- 1-1. About Us Modal Logic ---
+function openAboutModal(e) {
+    if (e && e.preventDefault) e.preventDefault();
+    const modal = document.getElementById('about-modal');
+    if (modal) modal.classList.add('show');
+}
+
+function closeAboutModal(e) {
+    if (!e || e.target.id === 'about-modal' || e.target.classList.contains('btn-close')) {
+        const modal = document.getElementById('about-modal');
+        if (modal) modal.classList.remove('show');
+    }
+}
+
 // --- 2. Filter Button Logic ---
 document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -475,7 +489,7 @@ const scenarioResponses = [
     },
     {
         keywords: ["연락처", "이메일", "인스타", "sns", "커피챗", "문의", "메일", "전화"],
-        answer: "김진우 학생의 작업에 관심을 가져주셔서 감사합니다! 📧 이메일: arch.jinwoo@example.ac.kr | 📸 인스타그램: @arch_jinwoo 로 연락 주시면 상세한 포트폴리오 질의응답이나 커피챗이 가능합니다."
+        answer: "신구대학교 건축학과 홍길동 학생의 작업에 관심을 가져주셔서 감사합니다! 📧 이메일: gildong.archi@shingu.ac.kr 로 연락 주시면 상세한 포트폴리오 질의응답이나 커피챗이 가능합니다."
     }
 ];
 
